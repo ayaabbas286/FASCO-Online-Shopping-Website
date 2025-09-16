@@ -1,0 +1,154 @@
+.sale-container {
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.image-box {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.image-box img {
+  width: 100%;
+  object-fit: cover;
+}
+.person-1 img {
+  position: absolute;
+
+  height: 75%;
+  bottom: 20px;
+  left: 0px;
+}
+.person-2 img {
+  position: absolute;
+
+  height: 100%;
+  left: 0;
+  bottom: 0;
+}
+.person-5 img {
+  position: absolute;
+
+  height: 75%;
+  width: 90%;
+  object-fit: contain;
+
+  left: 0;
+  bottom: 0;
+}
+.image-box .bottom-image {
+  background-color: white !important;
+}
+.bottom-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: contain;
+  left: 0;
+  bottom: 0;
+}
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.ultimate-text {
+  font-size: 7rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.sale-text img {
+  /* padding: 20px 40px; */
+  height: 150px;
+}
+
+.new-collection {
+  font-size: 1.2rem;
+  color: #666;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.shop-btn {
+  background-color: #000;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.top-image {
+  height: 200px;
+}
+
+.bottom-image {
+  height: 165px;
+}
+
+.left-image,
+.right-image {
+  height: 800px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ultimate-text {
+    font-size: 2.5rem;
+  }
+
+  .sale-text {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    padding: 15px 30px;
+  }
+
+  .new-collection {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .left-image,
+  .right-image {
+    height: 300px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Sample images with people silhouettes */
+.person-1,
+.person-2,
+.person-3,
+.person-5 {
+  background-color: #e0e0e0;
+}
+.image-placeholder {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

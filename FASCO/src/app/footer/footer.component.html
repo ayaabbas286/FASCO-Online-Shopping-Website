@@ -1,0 +1,28 @@
+<!-- footer.component.html -->
+<footer class="footer">
+  <div class="container">
+    <!-- Brand Name -->
+    <div class="d-flex justify-content-between">
+      <div class="footer-brand">
+        <h2>FASCO</h2>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="footer-nav">
+        <ul class="footer-links">
+          @for (link of footerLinks; track $index) {
+          <li>
+            <a [routerLink]="link.url" class="footer-link">{{ link.name }}</a>
+          </li>
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+
+  <div class="footer-copyright d-flex justify-content-center">
+    <p>Copyright © {{ currentYear }} Fasco. All Rights Reserved.</p>
+  </div>
+</footer>
