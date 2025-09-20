@@ -18,4 +18,6 @@ export class NavbarComponent {
         navbar?.classList.remove('scrolled');
       }
     }
+
+
 }

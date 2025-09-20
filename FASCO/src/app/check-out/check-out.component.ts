@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {  FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Iproduct } from '../iproduct';
 import { CommonModule } from '@angular/common';
@@ -14,39 +14,35 @@ import { ProductsService } from '../products.service';
   styleUrl: './check-out.component.css'
 })
 export class CheckOutComponent implements OnInit{
-     checkoutForm!: FormGroup;
+  checkoutForm!: FormGroup;
   product!: Iproduct | null;
 
   constructor(
     private route: ActivatedRoute,
-    private fb: FormBuilder,
     private productsService: ProductsService
   ) {}
 
   ngOnInit() {
-    // ✅ build form with validation
-    this.checkoutForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      country: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      address: ['', Validators.required],
-      city: ['', Validators.required],
-      postalCode: ['', Validators.required],
-      cardNumber: ['', [Validators.required, Validators.minLength(16)]],
-      expiry: ['', Validators.required],
-      cvv: ['', [Validators.required, Validators.minLength(3)]],
-      cardHolder: ['', Validators.required],
+    this.checkoutForm = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      country: new FormControl('', Validators.required),
+      firstName: new FormControl('', Validators.required),
+      lastName: new FormControl('', Validators.required),
+      address: new FormControl('', Validators.required),
+      city: new FormControl('', Validators.required),
+      postalCode: new FormControl('', Validators.required),
+      cardNumber: new FormControl('', [Validators.required, Validators.minLength(16)]),
+      expiry: new FormControl('', Validators.required),
+      cvv: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      cardHolder: new FormControl('', Validators.required),
     });
 
-    // ✅ get product id from route
     const productId = this.route.snapshot.paramMap.get('id');
     if (productId) {
       this.fetchProduct(productId);
     }
   }
 
-  // ✅ Fetch product from API using service
   fetchProduct(id: string) {
     this.productsService.GetProduct().subscribe({
       next: (products: Iproduct[]) => {
