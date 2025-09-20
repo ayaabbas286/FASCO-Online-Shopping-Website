@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    @for (product of displayedProducts; track $index) {
+    <div class="col-md-3 col-sm-6 col-12 mb-4">
+      <div class="product-card">
+        <!-- Product Image -->
+        <div class="product-image">
+          <img [src]="product.image" [alt]="product.name" />
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <!-- Title -->
+          <h5 class="product-title">{{ product.name }}</h5>
+
+          <!-- Manufacturer -->
+          <p class="brand">{{ product.manufacturer }}</p>
+
+          <!-- Category -->
+          <p class="category">{{ product.product_category?.name }}</p>
+
+          <!-- Price -->
+          <div class="price-row">
+            <span class="price">${{ product.price }}</span>
+          </div>
+
+          <!-- Description -->
+          <p class="product-description">{{ product.description }}</p>
+
+          <!-- Buy Button -->
+          <div class="buy-btn">
+            <button
+              class="btn btn-primary mx-auto d-block w-50"
+              [routerLink]="['/checkout', product.id]"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- Show More Button -->
+    <div class="view-more-container">
+      @if (hasMoreProducts()) {
+      <button class="view-more-btn" (click)="showMoreProducts()">
+        View More
+      </button>
+      } @if (canShowLess()) {
+      <button class="view-less-btn" (click)="showLessProducts()">
+        View Less
+      </button>
+      }
+    </div>
+  </div>
+</div>

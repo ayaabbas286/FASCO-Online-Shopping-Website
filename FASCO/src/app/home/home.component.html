@@ -52,18 +52,572 @@
 </section>
 <!-- section of brands -->
 <section>
-  <div class="container d-flex justify-content-between">
+  <div class="container brands-name p-4 d-flex justify-content-around">
     <div class="chanel">
-      <p>CHANEL</p>
+      <p><img src="/assets/brands/logo (1).png" alt="" /></p>
     </div>
     <div class="louis">
-      <p>CHANEL</p>
+      <p><img src="/assets/brands/logo (2).png" alt="" /></p>
     </div>
     <div class="prada">
-      <p>CHANEL</p>
+      <p><img src="/assets/brands/logo (3).png" alt="" /></p>
     </div>
     <div class="calvin">
-      <p>CHANEL</p>
+      <p><img src="/assets/brands/logo (4).png" alt="" /></p>
+    </div>
+    <div class="DENIM">
+      <p><img src="/assets/brands/logo (5).png" alt="" /></p>
     </div>
   </div>
 </section>
+<!-- section of Deals  -->
+<section id="deals">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-3">
+        <!-- heading  -->
+        <div class="d-flex flex-column">
+          <h2>Deals Of The <br />Month</h2>
+          <p class="opacity-50">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure,
+            voluptas pariatur tempore cum modi voluptate possimus temporibus
+            illum, dolore harum.
+          </p>
+          <h5>Hurry, Before it's too late</h5>
+          <a
+            routerLink="/shop"
+            class="btn buy-btn box-shadow mb-4 text-white ms-2 mt-4 w-50"
+          >
+            Buy Now
+          </a>
+
+          <!-- Countdown Timer -->
+          <p class="time-counter mt-3 fw-bold">
+            <span>{{ hours }} h</span>
+            <span>{{ minutes }} m</span>
+            <span>{{ seconds }} s</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="container">
+          <!-- Carousel -->
+          <div
+            id="DealslCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <!-- Item 1 -->
+              <div class="carousel-item active">
+                <div
+                  class="card shadow-lg border-0 mx-auto p-4 DealslCarousel-card"
+                >
+                  <div class="row g-4 align-items-center">
+                    <div class="col-md-4">
+                      <img
+                        src="/assets/Deals/3.png"
+                        class="rounded img-fluid"
+                        alt="customer"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <img
+                        src="/assets/Deals/2.png"
+                        class="rounded img-fluid"
+                        alt="customer"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <img
+                        src="/assets/Deals/1.png"
+                        class="rounded img-fluid"
+                        alt="customer"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="carousel-item">
+                <div
+                  class="card shadow-lg border-0 mx-auto p-4 DealslCarousel-card"
+                >
+                  <div class="row g-4 align-items-center">
+                    <div class="col-md-4">
+                      <img
+                        src="/assets/Deals/7.webp"
+                        class="rounded img-fluid"
+                        alt="customer"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <img
+                        src="/assets/Deals/8.jpg"
+                        class="rounded img-fluid"
+                        alt="customer"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <img
+                        src="/assets/Deals/9.jpg"
+                        class="rounded img-fluid"
+                        alt="customer"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="carousel-item">
+                <div
+                  class="card shadow-lg border-0 mx-auto p-4 DealslCarousel-card"
+                >
+                  <div class="row g-4 align-items-center">
+                    <div class="col-md-4">
+                      <img
+                        src="/assets/Deals/4.png"
+                        class="rounded img-fluid"
+                        alt="customer"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <img
+                        src="/assets/Deals/5.png"
+                        class="rounded img-fluid"
+                        alt="customer"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <img
+                        src="/assets/Deals/6.png"
+                        class="rounded img-fluid"
+                        alt="customer"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <!-- Custom controls under carousel -->
+            <div class="carousel-controls text-center mt-4">
+              <button
+                class="btn-control me-2"
+                type="button"
+                data-bs-target="#DealslCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="btn-control"
+                type="button"
+                data-bs-target="#DealslCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section of new arrivals -->
+<section id="new-arrivals" class="new-arrivals m-5">
+  <div class="container">
+    <div class="text-center">
+      <h2>New Arrivals</h2>
+      <p class="opacity-50">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis
+        sint!
+        <br />
+        Recusandae praesentium amet sequi aspernatur excepturi, minus ab vero.
+      </p>
+    </div>
+
+    <!-- Updated navigation section with correct routerLink paths -->
+    <div
+      class="d-flex justify-content-center align-items-center text-center m-5"
+    >
+      <a routerLink="mens-fashion" routerLinkActive="active" class="tab mx-3">
+        Men's Fashion
+      </a>
+      <a routerLink="womens-fashion" routerLinkActive="active" class="tab mx-3">
+        Women's Fashion
+      </a>
+      <a
+        routerLink="women-accessories"
+        routerLinkActive="active"
+        class="tab mx-3"
+      >
+        Women Accessories
+      </a>
+      <a
+        routerLink="men-accessories"
+        routerLinkActive="active"
+        class="tab mx-3"
+      >
+        Men Accessories
+      </a>
+      <a routerLink="discount-deals" routerLinkActive="active" class="tab mx-3">
+        Discount Deals
+      </a>
+    </div>
+    <!-- children will render here -->
+    <div class="fashion-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>
+
+<!-- section of peakey blinders  -->
+<section class="peaky-container">
+  <div class="container-fluid">
+    <div class="peaky-row row align-items-center">
+      <!-- Left Side -->
+      <div class="col-md-6 position-relative text-center">
+        <img
+          src="/assets/peakey.png"
+          alt="Peaky Blinders"
+          class="peaky-product-image img-fluid"
+        />
+
+        <!-- Labels -->
+        <span class="peaky-label-item" style="top: 10%; left: 65%"
+          >Flat Cap</span
+        >
+        <span class="peaky-label-item" style="top: 25%; left: 10%"
+          >Suspender</span
+        >
+        <span class="peaky-label-item" style="top: 40%; left: 70%"
+          >Hugo Boss</span
+        >
+        <span class="peaky-label-item" style="bottom: 25%; left: 15%"
+          >Hugo Boss</span
+        >
+        <span class="peaky-label-item" style="bottom: 10%; left: 60%"
+          >Santoni</span
+        >
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-md-6">
+        <div class="peaky-content p-5">
+          <p class="peaky-sub-head">Women Collection</p>
+          <h2 class="fw-bold">Peaky Blinders</h2>
+          <p class="peaky-desc-title">DESCRIPTION</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
+            duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
+            sollicitudin.
+          </p>
+          <div class="size-price mt-4">
+            <span class="me-3"
+              >Size: <span class="peaky-size-medium">M</span></span
+            >
+            <p class="fw-bold fs-4 mb-3">$100.00</p>
+            <a routerLink="/cart" class="btn buy-btn px-4 py-2 shadow-sm"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- section of features -->
+<section class="features-section mb-5">
+  <div class="container">
+    <div class="row text-center">
+      <!-- Feature 1 -->
+      <div class="col-md-3 col-6 mb-4">
+        <div class="feature-item">
+          <i class="bi bi-star fs-1 mb-3"></i>
+          <h6 class="fw-bold">High Quality</h6>
+          <p class="text-muted small">crafted from top materials</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-md-3 col-6 mb-4">
+        <div class="feature-item">
+          <i class="bi bi-award fs-1 mb-3"></i>
+          <h6 class="fw-bold">Warranty Protection</h6>
+          <p class="text-muted small">Over 2 years</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-md-3 col-6 mb-4">
+        <div class="feature-item">
+          <i class="bi bi-box-seam fs-1 mb-3"></i>
+          <h6 class="fw-bold">Free Shipping</h6>
+          <p class="text-muted small">Order over 150 $</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-md-3 col-6 mb-4">
+        <div class="feature-item">
+          <i class="bi bi-headset fs-1 mb-3"></i>
+          <h6 class="fw-bold">24 / 7 Support</h6>
+          <p class="text-muted small">Dedicated support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section of instagram -->
+<section class="py-5">
+  <div class="text-center mb-5">
+    <h3 class="fw-bold">Follow Us On Instagram</h3>
+    <p class="opacity-50">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
+      <br />
+      ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
+    </p>
+  </div>
+
+  <!-- photos row -->
+  <div class="container">
+    <div class="row g-2">
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="insta-box">
+          <img
+            src="/assets/Deals/1.png"
+            class="img-fluid img-odd w-100 h-100"
+            alt="insta"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="insta-box">
+          <img
+            src="/assets/Deals/3.png"
+            class="img-fluid w-100 h-100"
+            alt="insta"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="insta-box">
+          <img
+            src="/assets/Deals/2.png"
+            class="img-fluid w-100 h-100 img-odd"
+            alt="insta"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="insta-box">
+          <img
+            src="/assets/Deals/4.png"
+            class="img-fluid w-100 h-100"
+            alt="insta"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="insta-box">
+          <img
+            src="/assets/Deals/5.png"
+            class="img-fluid w-100 h-100 img-odd"
+            alt="insta"
+          />
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="insta-box">
+          <img
+            src="/assets/Deals/6.png"
+            class="img-fluid w-100 h-100"
+            alt="insta"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- secion of the slider  -->
+<section class="review-slider">
+  <div class="container py-5">
+    <!-- header slider  -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">This Is What Our Customers Say</h2>
+      <p class="text-muted">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
+        duis ultrices sollicitudin aliquam sem.
+      </p>
+    </div>
+
+    <!-- Carousel -->
+    <div
+      id="testimonialCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <!-- Item 1 -->
+        <div class="carousel-item active">
+          <div class="card shadow-lg border-0 mx-auto p-4 testimonial-card">
+            <div class="row g-4 align-items-center">
+              <div class="col-md-3 text-center">
+                <img
+                  src="/assets/Slider Review/1.png"
+                  class="rounded img-fluid"
+                  alt="customer"
+                />
+              </div>
+              <div class="col-md-9">
+                <p class="mb-3">
+                  "You won’t regret it. I would like to personally thank you for
+                  your outstanding product. Absolutely wonderful!"
+                </p>
+                <p class="text-warning mb-2">★★★★★</p>
+                <h5 class="mb-0 fw-bold">James K.</h5>
+                <small class="text-muted">Traveler</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="carousel-item">
+          <div class="card shadow-lg border-0 mx-auto p-4 testimonial-card">
+            <div class="row g-4 align-items-center">
+              <div class="col-md-3 text-center">
+                <img
+                  src="/assets/Slider Review/2.png"
+                  class="rounded img-fluid"
+                  alt="customer"
+                />
+              </div>
+              <div class="col-md-9">
+                <p class="mb-3">
+                  "Thank you for making it painless, pleasant and most of all
+                  hassle free! All are great."
+                </p>
+                <p class="text-warning mb-2">★★★★★</p>
+                <h5 class="mb-0 fw-bold">Susan W.</h5>
+                <small class="text-muted">Designer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="carousel-item">
+          <div class="card shadow-lg border-0 mx-auto p-4 testimonial-card">
+            <div class="row g-4 align-items-center">
+              <div class="col-md-3 text-center">
+                <img
+                  src="/assets/Slider Review/3.jpg"
+                  class="rounded img-fluid"
+                  alt="customer"
+                />
+              </div>
+              <div class="col-md-9">
+                <p class="mb-3">
+                  "This is exactly what I was looking for. Thank you for your
+                  outstanding service!"
+                </p>
+                <p class="text-warning mb-2">★★★★★</p>
+                <h5 class="mb-0 fw-bold">Ahmed R.</h5>
+                <small class="text-muted">Entrepreneur</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom controls under carousel -->
+      <div class="carousel-controls text-center mt-4">
+        <button
+          class="btn-control me-2"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="btn-control"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- section of the new settler   -->
+<section class="newsletter">
+  <div class="container">
+    <div
+      class="newsletter-container d-flex flex-column flex-md-row align-items-center justify-content-center position-relative py-5 px-3"
+    >
+      <!-- Left Image -->
+      <img
+        src="/assets/new settler/newsettler-b.png"
+        alt="man"
+        class="d-none d-md-block position-absolute start-0 bottom-5 newsletter-img"
+      />
+
+      <!-- Content -->
+      <div class="content-box text-center">
+        <h2 class="fw-semibold mb-3">Subscribe To Our Newsletter</h2>
+        <p class="text-muted mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
+          duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
+          sollicitudin.
+        </p>
+
+        <form
+          class="d-flex flex-column justify-content-center align-items-center newsletter-form"
+        >
+          <input
+            type="email"
+            class="form-control box-shadow-input"
+            placeholder="michael@ymail.com"
+          />
+          <button type="submit" class="btn box-shadow ms-2 mt-4 w-50">
+            Subscribe Now
+          </button>
+        </form>
+      </div>
+
+      <!-- Right Image -->
+      <img
+        src="/assets/new settler/newsettler-w.png"
+        alt="woman"
+        class="d-none d-md-block position-absolute end-0 bottom-5 newsletter-img"
+      />
+    </div>
+  </div>
+</section>
+<!-- Fixed Buttons -->
+<div class="fixed-buttons">
+  <!-- Shopping Cart Button -->
+  <button class="btn cart-btn" routerLink="/cart">
+    <i class="bi bi-cart3"></i>
+  </button>
+
+  <!-- Scroll to Top Button -->
+  <button
+    class="btn scroll-btn"
+    *ngIf="showScrollButton"
+    (click)="scrollToTop()"
+  >
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>

@@ -1,1 +1,178 @@
-<p>check-out works!</p>
+<div class="container checkout-page">
+  <div class="row">
+    <!-- LEFT SIDE (Form) -->
+    <div class="col-md-8">
+      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <!-- Contact -->
+        <h3>Contact</h3>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email Address"
+            formControlName="email"
+          />
+
+          @if(checkoutForm.get('email')?.errors &&
+          checkoutForm.get('email')?.touched) {
+          <div class="alert alert-danger mt-1">
+            @if(checkoutForm.get('email')?.getError('required')) {
+            <p>Email is required</p>
+            } @else if(checkoutForm.get('email')?.getError('email')) {
+            <p>Enter a valid email</p>
+            }
+          </div>
+          }
+        </div>
+
+        <!-- Delivery -->
+        <h3>Delivery</h3>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First Name"
+              formControlName="firstName"
+            />
+            @if(checkoutForm.get('firstName')?.errors &&
+            checkoutForm.get('firstName')?.touched) {
+            <p class="text-danger small">First name is required</p>
+            }
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Last Name"
+              formControlName="lastName"
+            />
+            @if(checkoutForm.get('lastName')?.errors &&
+            checkoutForm.get('lastName')?.touched) {
+            <p class="text-danger small">Last name is required</p>
+            }
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Address"
+            formControlName="address"
+          />
+          @if(checkoutForm.get('address')?.errors &&
+          checkoutForm.get('address')?.touched) {
+          <p class="text-danger small">Address is required</p>
+          }
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="City"
+              formControlName="city"
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Postal Code"
+              formControlName="postalCode"
+            />
+          </div>
+        </div>
+
+        <!-- Payment -->
+        <h3>Payment</h3>
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Card Number"
+            formControlName="cardNumber"
+          />
+          @if(checkoutForm.get('cardNumber')?.errors &&
+          checkoutForm.get('cardNumber')?.touched) {
+          <p class="text-danger small">Card number must be 16 digits</p>
+          }
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Expiration Date (MM/YY)"
+              formControlName="expiry"
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="CVV"
+              formControlName="cvv"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Card Holder Name"
+            formControlName="cardHolder"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-dark w-100">Pay Now</button>
+      </form>
+    </div>
+
+    <!-- RIGHT SIDE (Product Summary) -->
+    <div class="col-md-4">
+      <div class="summary-card p-3 border rounded">
+        @if(product) {
+        <div class="d-flex mb-3">
+          <img
+            [src]="product.image"
+            alt="{{ product.name }}"
+            class="me-3"
+            width="100"
+          />
+          <div>
+            <h6>{{ product.name }}</h6>
+            <p class="mb-0">{{ product.description }}</p>
+            <strong>${{ product.price }}</strong>
+          </div>
+        </div>
+        }
+
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control d-inline w-50"
+            placeholder="Discount code"
+          />
+          <button class="btn btn-dark p-2 ms-2">Apply</button>
+        </div>
+
+        <ul class="list-unstyled">
+          <li class="d-flex justify-content-between">
+            <span>Subtotal</span><strong>${{ product?.price }}</strong>
+          </li>
+          <li class="d-flex justify-content-between">
+            <span>Shipping</span><strong>$40</strong>
+          </li>
+          <li class="d-flex justify-content-between">
+            <span>Total</span><strong>${{ product?.price! + 40 }}</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

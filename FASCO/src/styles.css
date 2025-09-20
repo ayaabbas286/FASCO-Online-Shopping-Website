@@ -27,6 +27,25 @@
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+  font-family: "orb";
+  src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf")
+    format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   font-family: "Playfair_Display", sans-serif;
+  padding-top: 80px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar-brand {
+  font-size: 32px;
+  color: rgb(43, 43, 43);
+  font-weight: bolder;
+  font-family: "Playfair_Display";
 }

@@ -1,1 +1,142 @@
-<p>cart works!</p>
+<div class="cart-container">
+  <!-- Cart Header -->
+  <div class="cart-header">
+    <h1 class="cart-title">Shopping Cart</h1>
+    <p class="cart-subtitle">Review your items before checkout</p>
+  </div>
+
+  <!-- Cart Table -->
+  <table class="cart-table">
+    <thead class="table-header">
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Cart Item 1 -->
+      <tr class="cart-item">
+        <td>
+          <div class="product-info">
+            <img
+              src="/assets/instagram/4.png"
+              alt="Mini Dress"
+              class="product-image"
+            />
+            <div class="product-details">
+              <h3>Mini Dress</h3>
+              <div class="product-color">Color: Red</div>
+              <a href="#" class="remove-link">Remove</a>
+            </div>
+          </div>
+        </td>
+        <td class="price">$14.90</td>
+        <td>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="text" value="1" class="qty-input" readonly />
+            <button class="qty-btn">+</button>
+          </div>
+        </td>
+        <td class="total-price">$14.90</td>
+      </tr>
+
+      <!-- Cart Item 2 -->
+      <tr class="cart-item">
+        <td>
+          <div class="product-info">
+            <img
+              src="/assets/instagram/2.png"
+              alt="Summer Blouse"
+              class="product-image"
+            />
+            <div class="product-details">
+              <h3>Summer Blouse</h3>
+              <div class="product-color">Color: Blue</div>
+              <a href="#" class="remove-link">Remove</a>
+            </div>
+          </div>
+        </td>
+        <td class="price">$29.99</td>
+        <td>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="text" value="2" class="qty-input" readonly />
+            <button class="qty-btn">+</button>
+          </div>
+        </td>
+        <td class="total-price">$59.98</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Cart Footer -->
+  <div class="cart-footer">
+    <!-- Gift Wrap Option -->
+    <div class="gift-option">
+      <input type="checkbox" id="giftWrap" class="gift-checkbox" />
+      <label for="giftWrap" class="gift-label">
+        For $10.00 Please Wrap The Product
+      </label>
+    </div>
+
+    <!-- Subtotal -->
+    <div class="subtotal-section">
+      <span class="subtotal-label">Subtotal</span>
+      <span class="subtotal-amount">$119.88</span>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button class="btn btn-continue">Continue Shopping</button>
+      <button class="btn btn-checkout">Checkout</button>
+    </div>
+  </div>
+</div>
+<!-- section of the new settler   -->
+<section class="newsletter">
+  <div class="container">
+    <div
+      class="newsletter-container d-flex flex-column flex-md-row align-items-center justify-content-center position-relative py-5 px-3"
+    >
+      <!-- Left Image -->
+      <img
+        src="/assets/new settler/newsettler-b.png"
+        alt="man"
+        class="d-none d-md-block position-absolute start-0 bottom-5 newsletter-img"
+      />
+
+      <!-- Content -->
+      <div class="content-box text-center">
+        <h2 class="fw-semibold mb-3">Subscribe To Our Newsletter</h2>
+        <p class="text-muted mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
+          duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
+          sollicitudin.
+        </p>
+
+        <form
+          class="d-flex flex-column justify-content-center align-items-center newsletter-form"
+        >
+          <input
+            type="email"
+            class="form-control box-shadow-input"
+            placeholder="michael@ymail.com"
+          />
+          <button type="submit" class="btn box-shadow ms-2 mt-4 w-50">
+            Subscribe Now
+          </button>
+        </form>
+      </div>
+
+      <!-- Right Image -->
+      <img
+        src="/assets/new settler/newsettler-w.png"
+        alt="woman"
+        class="d-none d-md-block position-absolute end-0 bottom-5 newsletter-img"
+      />
+    </div>
+  </div>
+</section>

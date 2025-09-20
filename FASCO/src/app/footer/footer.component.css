@@ -1,5 +1,7 @@
 /* footer.component.css */
 .footer {
+  background-color: #eee;
+  margin-top: 10px !important;
   padding: 40px 0 20px 0;
   border-top: 1px solid #d0d0d0;
   margin-top: auto;

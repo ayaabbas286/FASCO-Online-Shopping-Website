@@ -1,1 +1,198 @@
-<p>sign-up works!</p>
+<section>
+  <div class="d-flex justify-content-center">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-container">
+            <img src="/assets/form/7.webp" alt="" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="login-container">
+            <h1 class="navbar-brand">FASCO</h1>
+            <h4 class="page-title">Create Account</h4>
+
+            <!-- Google / Email buttons -->
+            <div class="social-login">
+              <button class="google-btn">
+                <img
+                  src="https://img.icons8.com/color/16/000000/google-logo.png"
+                />
+                Sign up with Google
+              </button>
+              <button class="email-btn">
+                <img
+                  src="https://img.icons8.com/color/16/000000/gmail-new.png"
+                />
+                Sign up with Email
+              </button>
+            </div>
+
+            <div class="divider">— OR —</div>
+
+            <!-- Registration Form -->
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <!-- First Name & Last Name Row -->
+              <div class="form-row">
+                <div class="form-field">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    formControlName="firstName"
+                    name="firstName"
+                    id="firstName"
+                  />
+                  <!-- FIXED: Added space after ')' and before '{' -->
+                  @if (registerForm.get('firstName')?.errors &&
+                  registerForm.get('firstName')?.touched) {
+                  <div class="alert error alert-danger">
+                    @if (registerForm.get('firstName')?.getError('required')) {
+                    <p>First name is required</p>
+                    } @else if
+                    (registerForm.get('firstName')?.getError('minlength')) {
+                    <p>First name must be at least 2 characters</p>
+                    } @else if
+                    (registerForm.get('firstName')?.getError('pattern')) {
+                    <p>First name should contain only letters</p>
+                    }
+                  </div>
+                  }
+                </div>
+
+                <div class="form-field">
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    formControlName="lastName"
+                    name="lastName"
+                    id="lastName"
+                  />
+                  @if (registerForm.get('lastName')?.errors &&
+                  registerForm.get('lastName')?.touched) {
+                  <div class="alert error alert-danger">
+                    @if (registerForm.get('lastName')?.getError('required')) {
+                    <p>Last name is required</p>
+                    } @else if
+                    (registerForm.get('lastName')?.getError('minlength')) {
+                    <p>Last name must be at least 2 characters</p>
+                    } @else if
+                    (registerForm.get('lastName')?.getError('pattern')) {
+                    <p>Last name should contain only letters</p>
+                    }
+                  </div>
+                  }
+                </div>
+              </div>
+
+              <!-- Email & Phone Row -->
+              <div class="form-row">
+                <div class="form-field">
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    formControlName="email"
+                    name="email"
+                    id="email"
+                  />
+                  @if (registerForm.get('email')?.errors &&
+                  registerForm.get('email')?.touched) {
+                  <div class="alert error alert-danger">
+                    @if (registerForm.get('email')?.getError('required')) {
+                    <p>Email is required</p>
+                    } @else if (registerForm.get('email')?.getError('email')) {
+                    <p>Enter valid email address</p>
+                    }
+                  </div>
+                  }
+                </div>
+
+                <div class="form-field">
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    formControlName="phone"
+                    name="phone"
+                    id="phone"
+                  />
+                  @if (registerForm.get('phone')?.errors &&
+                  registerForm.get('phone')?.touched) {
+                  <div class="alert error alert-danger">
+                    @if (registerForm.get('phone')?.getError('required')) {
+                    <p>Phone number is required</p>
+                    } @else if (registerForm.get('phone')?.getError('pattern'))
+                    {
+                    <p>Enter valid phone number</p>
+                    }
+                  </div>
+                  }
+                </div>
+              </div>
+
+              <!-- Password & Confirm Password Row -->
+              <div class="form-row">
+                <div class="form-field">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    formControlName="password"
+                    name="password"
+                    id="password"
+                  />
+                  @if (registerForm.get('password')?.errors &&
+                  registerForm.get('password')?.touched) {
+                  <div class="alert error alert-danger">
+                    @if (registerForm.get('password')?.getError('required')) {
+                    <p>Password is required</p>
+                    } @else if
+                    (registerForm.get('password')?.getError('minlength')) {
+                    <p>Password must be at least 6 characters</p>
+                    }
+                  </div>
+                  }
+                </div>
+
+                <div class="form-field">
+                  <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    formControlName="confirmPassword"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                  />
+                  @if (registerForm.get('confirmPassword')?.errors &&
+                  registerForm.get('confirmPassword')?.touched) {
+                  <div class="alert error alert-danger">
+                    @if
+                    (registerForm.get('confirmPassword')?.getError('required'))
+                    {
+                    <p>Please confirm your password</p>
+                    }
+                  </div>
+                  }
+                </div>
+              </div>
+
+              <!-- Password Mismatch Error (Form-level validation) -->
+              @if (registerForm.errors?.['mismatch'] &&
+              registerForm.get('confirmPassword')?.touched) {
+              <div class="alert error alert-danger form-error">
+                <p>Passwords do not match</p>
+              </div>
+              }
+
+              <button type="submit" class="create-account-btn">
+                Create Account
+              </button>
+            </form>
+
+            <div class="login-link">
+              Already have an account? <a routerLink="/sign-in">login</a>
+            </div>
+
+            <div class="terms-footer">FASCO Terms & Conditions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
