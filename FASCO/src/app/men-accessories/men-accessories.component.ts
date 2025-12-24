@@ -40,7 +40,7 @@ _products: Iproduct[] = [];
   showLessProducts(): void {
     this.currentLoadCount = this.initialLoadCount;
     this.displayedProducts = this._products.slice(0, this.initialLoadCount);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 1450, behavior: 'smooth' });
   }
 
   hasMoreProducts(): boolean {

@@ -11,17 +11,26 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './sign-in.component.css'
 })
 export class SignInComponent {
-loginForm: FormGroup = new FormGroup({
-email:new FormControl(null,[Validators.required, Validators.email] ),
-password: new FormControl (null,[Validators.required, Validators.pattern(/^\w{6,}$/)])});
+ loginForm: FormGroup = new FormGroup({
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    password: new FormControl(null, [
+      Validators.required,
+      Validators.pattern(/^\w{6,}$/)
+    ])
+  });
 
+  constructor(private router: Router) {}
 
   onSubmit() {
     if (this.loginForm.valid) {
-      console.log('Form Data:', this.loginForm.value);
-    }else {
-            this.loginForm.markAllAsTouched();
+      const userData = this.loginForm.value;
 
+      localStorage.setItem('user', JSON.stringify(userData));
+
+      this.router.navigate(['/home']);
+
+      this.loginForm.reset();
+    } else {
+      this.loginForm.markAllAsTouched();
     }
-  }
-}
+  }}

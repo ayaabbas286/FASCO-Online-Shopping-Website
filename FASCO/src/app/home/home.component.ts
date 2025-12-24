@@ -12,6 +12,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
  private intervalId: any;
+  userName: string | null = null;
 
   //  countdown
   targetTime = new Date().getTime() + 5 * 60 * 60 * 1000;
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
     this.startCountdown();
+
   }
 
   startCountdown() {
