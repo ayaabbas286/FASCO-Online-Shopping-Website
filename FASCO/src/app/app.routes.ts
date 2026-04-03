@@ -19,38 +19,41 @@ import { DiscountDealsComponent } from './discount-deals/discount-deals.componen
 import { ErrorComponent } from './error/error.component';
 
 export const routes: Routes = [
-{ path: "", redirectTo: "home", pathMatch: "full" },
-    {
-    path: "home",
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: 'home',
     component: HomeComponent,
-    title: "FASCO",
+    title: 'FASCO',
     children: [
-      { path: "", redirectTo: "womens-fashion", pathMatch: "full" }, // Default child route
-      { path: "mens-fashion", component: MensFashionComponent },
-      { path: "womens-fashion", component: WomensFashionComponent },
-      { path: "women-accessories", component: WomenAccessoriesComponent },
-      { path: "men-accessories", component: MenAccessoriesComponent },
-      { path: "discount-deals", component: DiscountDealsComponent },
-    ]
+      { path: '', redirectTo: 'home', pathMatch: 'full' }, // Default child route
+      { path: 'mens-fashion', component: MensFashionComponent },
+      { path: 'womens-fashion', component: WomensFashionComponent },
+      { path: 'women-accessories', component: WomenAccessoriesComponent },
+      { path: 'men-accessories', component: MenAccessoriesComponent },
+      { path: 'discount-deals', component: DiscountDealsComponent },
+    ],
   },
-    {path:"navbar", component:NavbarComponent},
-    {path:"footer", component:FooterComponent},
-    {path:"cart", component:CartComponent},
-    {path:"shop", component:ShopComponent,children: [
-      { path: "", redirectTo: "womens-fashion", pathMatch: "full" }, // Default child route
-      { path: "mens-fashion", component: MensFashionComponent },
-      { path: "womens-fashion", component: WomensFashionComponent },
-      { path: "women-accessories", component: WomenAccessoriesComponent },
-      { path: "men-accessories", component: MenAccessoriesComponent },
-      { path: "discount-deals", component: DiscountDealsComponent },
-    ]},
-    {path:"checkout/:id", component:CheckOutComponent},
-    {path:"confirm-password", component:ConfirmPasswordWindowComponent},
-    {path:"forget-password", component:ForgetPasswordComponent},
-    {path:"new-password", component:NewPasswordComponent},
-    {path:"product-page", component:ProductPageComponent},
-    {path:"sign-in", component:SignInComponent},
-    {path:"sign-up", component:SignUpComponent},
-{path:"**", component:ErrorComponent}
-
+  { path: 'navbar', component: NavbarComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'cart', component: CartComponent },
+  {
+    path: 'shop',
+    component: ShopComponent,
+    children: [
+      { path: '', redirectTo: 'womens-fashion', pathMatch: 'full' }, // Default child route
+      { path: 'mens-fashion', component: MensFashionComponent },
+      { path: 'womens-fashion', component: WomensFashionComponent },
+      { path: 'women-accessories', component: WomenAccessoriesComponent },
+      { path: 'men-accessories', component: MenAccessoriesComponent },
+      { path: 'discount-deals', component: DiscountDealsComponent },
+    ],
+  },
+  { path: 'checkout/:id', component: CheckOutComponent },
+  { path: 'confirm-password', component: ConfirmPasswordWindowComponent },
+  { path: 'forget-password', component: ForgetPasswordComponent },
+  { path: 'new-password', component: NewPasswordComponent },
+  { path: 'product-page', component: ProductPageComponent },
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-up', component: SignUpComponent },
+  { path: '**', component: ErrorComponent },
 ];
