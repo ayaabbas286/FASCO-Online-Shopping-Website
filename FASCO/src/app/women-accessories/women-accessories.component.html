@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     @for (product of displayedProducts; track $index) {
-    <div class="col-md-3 col-sm-6 col-12 mb-4">
+    <div class="col-xl-3 col-md-4 col-sm-6 col-12 mb-4">
       <div class="product-card">
         <!-- Product Image -->
         <div class="product-image">
@@ -17,7 +17,7 @@
           <p class="brand">{{ product.manufacturer }}</p>
 
           <!-- Category -->
-          <p class="category">{{ product.product_category?.name }}</p>
+          <p class="category">{{ product.product_category.name }}</p>
 
           <!-- Price -->
           <div class="price-row">

@@ -291,7 +291,7 @@
 .peaky-product-image {
   height: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   margin-left: -17px;
 }
 
@@ -350,28 +350,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .ultimate-text {
-    font-size: 2.5rem;
-  }
 
-  .sale-text {
-    font-size: 3rem;
-    letter-spacing: 4px;
-    padding: 15px 30px;
-  }
-
-  .new-collection {
-    font-size: 1rem;
-    letter-spacing: 2px;
-  }
-
-  .left-image,
-  .right-image {
-    height: 300px;
-    margin-bottom: 15px;
-  }
-}
 .fixed-buttons {
   position: fixed;
   right: 20px;
@@ -399,4 +378,101 @@
   background-color: white;
   color: black;
   border: 1px solid #ddd;
+}
+
+@media (max-width: 767px) {
+  .brands-name {
+    padding: 41px !important;
+  }
+  #DealslCarousel img {
+    margin: 10px auto;
+    display: inline-block;
+  }
+  #new-arrivals {
+    margin: 10px 0 !important;
+  }
+  #new-arrivals .nav-new {
+    flex-wrap: wrap;
+    margin: 0px !important;
+  }
+  #new-arrivals .nav-new a {
+    padding: 10px 2px !important;
+    border-radius: 8px;
+    background: #f3f3f3;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    flex: 0 1 45% !important;
+    margin-bottom: 14px;
+    margin-right: 0 !important;
+  }
+  .ultimate-text {
+    font-size: 2.5rem;
+  }
+
+  .sale-text {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    padding: 15px 30px;
+  }
+
+  .new-collection {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .left-image,
+  .right-image {
+    display: none;
+  }
+}
+/* Small Screens  */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sale-text {
+    height: 143px;
+  }
+  .ultimate-text {
+    font-size: 72px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  .person-5 img {
+    position: absolute;
+    height: 81%;
+    width: 161px;
+    object-fit: cover;
+    left: -4px;
+    bottom: 0;
+  }
+  .left-image,
+  .right-image {
+    height: 736px;
+    margin-bottom: 15px;
+  }
+  .sale-container {
+    min-height: 72vh;
+    padding: 20px 0;
+  }
+}
+/* midume */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .deals .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .time-counter span{
+    padding: 7px;
+    border: 1px solid #eee;
+    margin: 10px;
+    border-radius: 5px;
+    font-family: "sora";
+    font-size: 1.3rem;
+  }
+}
+/* D Large Screens  */
+@media (min-width: 1200px) {
 }
