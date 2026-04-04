@@ -42,7 +42,6 @@ body {
 }
 html {
   scroll-behavior: smooth;
-  border: 2px solid red;
 }
 .navbar-brand {
   font-size: 32px;
